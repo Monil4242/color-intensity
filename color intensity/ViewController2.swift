@@ -1,9 +1,3 @@
-//
-//  ViewController2.swift
-//  color intensity
-//
-//  Created by monil sojitra on 17/02/23.
-//
 
 import UIKit
 
@@ -35,11 +29,9 @@ class ViewController2: UIViewController {
     @IBAction func easyButtonAction(_ sender: UIButton) {
         navigate()
     }
-    
     @IBAction func mediumButtonAction(_ sender: UIButton) {
         navigate2()
     }
-    
     @IBAction func hardButtonAction(_ sender: UIButton) {
         navigate3()
     }
