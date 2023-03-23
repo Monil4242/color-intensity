@@ -13,11 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var pg: UIProgressView!
     
     @IBOutlet weak var playOt: UIButton!
+    
+    @IBOutlet weak var playingGame: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         pg.progress = 0.0
         playOt.layer.cornerRadius = 10
         playOt.layer.masksToBounds = true
+        pg.isHidden = true
+        playingGame.isHidden = true
     }
     func progress(){
         var a : Float = 0.0
@@ -32,6 +36,7 @@ class ViewController: UIViewController {
             }
         })
     }
+    
     func navigate(){
         let n = storyboard?.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
         navigationController?.pushViewController(n, animated: true)
@@ -39,6 +44,8 @@ class ViewController: UIViewController {
     
     @IBAction func playGameButtonAction(_ sender: UIButton) {
         progress()
+        pg.isHidden = false
+        playingGame.isHidden = false
     }
 }
 

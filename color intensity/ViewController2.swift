@@ -37,17 +37,20 @@ class ViewController2: UIViewController {
     }
     func navigate(){
         let n = storyboard?.instantiateViewController(withIdentifier: "ViewController3") as! ViewController3
-//        n.freq = 0.1
+        n.freq = 0.1
+        UserDefaults.standard.set(10, forKey: "second")
         navigationController?.pushViewController(n, animated: true)
     }
     func navigate2(){
         let n = storyboard?.instantiateViewController(withIdentifier: "ViewController3") as! ViewController3
         n.freq = 0.050
+        UserDefaults.standard.set(7, forKey: "second")
         navigationController?.pushViewController(n, animated: true)
     }
     func navigate3(){
         let n = storyboard?.instantiateViewController(withIdentifier: "ViewController3") as! ViewController3
         n.freq = 0.020
+        UserDefaults.standard.set(5, forKey: "second")
         navigationController?.pushViewController(n, animated: true)
     }
 

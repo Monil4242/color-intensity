@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="pg" destination="rDY-d9-3gL" id="7M5-FB-86E"/>
                         <outlet property="playOt" destination="VBH-Oc-ruz" id="sEa-VV-wps"/>
+                        <outlet property="playingGame" destination="5Qp-4M-uO6" id="Yic-8C-gax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -183,7 +184,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LfA-dz-o7i">
                                 <rect key="frame" x="16" y="409" width="361" height="352"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.081234575128879674" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="td0-8d-4NI">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="estimatedItemSize" width="70" height="70"/>
@@ -202,7 +203,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="Vx9-TR-iEN" id="JMG-0z-ZZO"/>
+                                    <outlet property="dataSource" destination="Vx9-TR-iEN" id="ehT-Wj-KU6"/>
                                     <outlet property="delegate" destination="Vx9-TR-iEN" id="agI-nU-04C"/>
                                 </connections>
                             </collectionView>
