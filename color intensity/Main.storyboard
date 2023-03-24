@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="XkDGiV" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-jj-TUC">
-                                <rect key="frame" x="-263" y="-466" width="656" height="1593"/>
+                                <rect key="frame" x="-263" y="-463" width="656" height="1593"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -207,12 +207,30 @@
                                     <outlet property="delegate" destination="Vx9-TR-iEN" id="agI-nU-04C"/>
                                 </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Bo-0e-tXp">
+                                <rect key="frame" x="338" y="94" width="39" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.78838259450000003" green="0.55302398720000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GgY-Qs-WI3">
+                                <rect key="frame" x="291" y="94" width="39" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.78838259450000003" green="0.55302398720000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I0X-WD-sVh">
+                                <rect key="frame" x="244" y="94" width="39" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.78838259450000003" green="0.55302398720000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LBM-G0-rAr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="cw" destination="LfA-dz-o7i" id="wh8-rB-hNU"/>
+                        <outlet property="lifeLine1" destination="9Bo-0e-tXp" id="pUI-3b-riY"/>
+                        <outlet property="lifeLine2" destination="GgY-Qs-WI3" id="djs-Gd-Fse"/>
+                        <outlet property="lifeLine3" destination="I0X-WD-sVh" id="82m-dI-XP0"/>
                         <outlet property="pg" destination="HBG-nj-2O5" id="52Y-Wd-CWm"/>
                         <outlet property="scoreOutlet" destination="Y16-0F-foz" id="xZN-KZ-Jwj"/>
                     </connections>
@@ -244,6 +262,7 @@
     <resources>
         <image name="XkDGiV" width="400" height="640"/>
         <image name="d6j7bt3-cbcb2a46-a80e-41d8-b69b-b3b1d2a01fbc" width="800" height="600"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="istockphoto-1256951458-612x612-removebg-preview" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

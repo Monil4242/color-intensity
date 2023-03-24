@@ -1,6 +1,4 @@
-
 import UIKit
-
 class ViewController3: UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {
     
     var colourhelper : [String : UIColor] = ["red" : UIColor.red,"blue" : UIColor.blue,"green" : UIColor.green,"gray" : UIColor.gray,"brown" : UIColor.brown,"black" : UIColor.black,"yellow" : UIColor.yellow,"cyan" : UIColor.cyan,"white" : UIColor.white]
@@ -11,12 +9,17 @@ class ViewController3: UIViewController,UICollectionViewDataSource,UICollectionV
     var score = 0
     var fgcolor = ["red","blue","green","gray","brown","black","yellow","cyan","white"]
     var bgcolor = ["red","blue","green","gray","brown","black","yellow","cyan","white"]
+    var a = ""
     var b = ""
-   // var count = 0
+    var life = 1
+    // var count = 0
     
     @IBOutlet weak var cw: UICollectionView!
     @IBOutlet weak var scoreOutlet: UILabel!
     @IBOutlet weak var pg: UIProgressView!
+    @IBOutlet weak var lifeLine1: UIImageView!
+    @IBOutlet weak var lifeLine2: UIImageView!
+    @IBOutlet weak var lifeLine3: UIImageView!
     var time = Timer()
     var freq = 0.1
     
@@ -30,33 +33,29 @@ class ViewController3: UIViewController,UICollectionViewDataSource,UICollectionV
         scoreupdate()
         
     }
-    func logic(){
-        var a = fgcolor.randomElement()
-        var b = bgcolor.randomElement()
-        var array1 : [String] = []
-        while a == b{
-            a = fgcolor.randomElement()
+    func logic() {
+        a = fgcolor.randomElement()!
+        b = bgcolor.randomElement()!
+        while a == b {
+            a = fgcolor.randomElement()!
             b = bgcolor.randomElement()!
         }
         var number = Int.random(in: 0...8)
-        print(number)
-        while number >= 4{
+        while number >= 4 {
             number = Int.random(in: 0...8)
         }
-        print(number)
-        if number <= 4{
-            for i in 0...3{
-                array1.append(a!)
+        var array1 : [String] = []
+        if number <= 4 {
+            for i in 0...3 {
+                array1.append(a)
             }
         }
-        for i in 0...4{
-            array1.append(b!)
+        for i in 0...4 {
+            array1.append(b)
         }
-        print(array1)
         bgcolor = array1
         bgcolor.shuffle()
         cw.reloadData()
-        progress()
     }
     
     func scoreupdate(){
@@ -90,11 +89,15 @@ class ViewController3: UIViewController,UICollectionViewDataSource,UICollectionV
             self.logic()
         }))
         alert.addAction(UIAlertAction(title: "Restart", style: .destructive,handler: { _ in
+            self.life = 1
             self.progress()
             self.scoreupdate()
             self.point = 0
             self.scoreOutlet.text = "0"
             self.logic()
+            self.lifeLine1.image = UIImage(systemName: "heart.fill")
+            self.lifeLine2.image = UIImage(systemName: "heart.fill")
+            self.lifeLine3.image = UIImage(systemName: "heart.fill")
             
         }))
         present(alert, animated: true)
@@ -129,46 +132,30 @@ class ViewController3: UIViewController,UICollectionViewDataSource,UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if bgcolor[indexPath.row] == b{
-            logic()
-        }
-        else{
+            
             point += 1
             scoreOutlet.text = "\(point)"
             timecount = UserDefaults.standard.double(forKey: "second")
-            showalert()
+            logic()
+            progress()
         }
-        
-        //        if fgcolor[indexPath.row] != bgcolor[indexPath.row]{
-        //            point += 1
-        //            scoreOutlet.text = "\(point)"
-        //            timecount = UserDefaults.standard.double(forKey: "second")
-        //            fgcolor.shuffled()
-        //            bgcolor.shuffled()
-        //            cw.reloadData()
-        //        for i in 0...8 {
-        //            if array1[i] == b {
-        //                count+=1
-        //            }
-        //        }
-        //
-        //        if count <= 5 {
-        //            logic()
-        //        }
-        //        else {
-        //            showalert()
-        //        }
-        //            logic()
-        //        }
-        //        else{
-        //            showalert()
-        //            if point != 0
-        //            {
-        //                point -= 0
-        //            }
-        //            scoreOutlet.text = "\(point)"
-        //        }
-        
-        
+        else if life == 1{
+            lifeLine1.image = UIImage(systemName: "heart")
+            life += 1
+            cw.reloadData()
+            progress()
+        }
+        else if life == 2{
+            lifeLine2.image = UIImage(systemName: "heart")
+            life += 1
+            cw.reloadData()
+            logic()
+            progress()
+        }
+        else if life == 3{
+            lifeLine3.image = UIImage(systemName: "heart")
+           showalert()
+        }
+    
     }
 }
-
