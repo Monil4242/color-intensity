@@ -38,10 +38,6 @@
                                 <rect key="frame" x="18" y="298" width="361" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d6j7bt3-cbcb2a46-a80e-41d8-b69b-b3b1d2a01fbc" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-BI-rqj">
-                                <rect key="frame" x="70" y="402" width="256" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBH-Oc-ruz">
                                 <rect key="frame" x="156" y="739" width="85" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,6 +50,10 @@
                                     <action selector="playGameButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVQ-qS-qph"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d6j7bt3-cbcb2a46-a80e-41d8-b69b-b3b1d2a01fbc" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-BI-rqj">
+                                <rect key="frame" x="47" y="459" width="256" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
